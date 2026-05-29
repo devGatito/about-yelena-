@@ -1,0 +1,64 @@
+{
+  "es": {
+    "aria": {
+      "slide": "Ir al slide",
+      "heroSection": "Sección hero"
+    },
+    "heading": {
+      
+      "line2": "Todo en un solo lugar."
+    },
+    "description": "Un recorrido visual y personal por mi historia, mis recuerdos y mi etapa de estudios.",
+    "slides": [
+      {
+        "image": "https://cdn.prod.website-files.com/6900c654960f0d76825aec71/6908eaa03ca3b733f5b55d74_hero-slide-2-img-1.avif",
+        "badge": "Mi familia",
+        "name": "Recuerdos familiares",
+        "role": "Historia personal"
+      },
+      {
+        "image": "https://cdn.prod.website-files.com/6900c654960f0d76825aec71/6908eaa045537dccaaf8a29d_hero-slide-4-img-1.avif",
+        "badge": "Mi bocho",
+        "name": "Aventuras en bocho",
+        "role": "Experiencias"
+      },
+      {
+        "image": "https://cdn.prod.website-files.com/6900c654960f0d76825aec71/6908eaa08dc1cd6373fb8c1a_hero-slide-5-img-1.avif",
+        "badge": "Taxco",
+        "name": "Mi etapa de estudios",
+        "role": "Formación"
+      }
+    ]
+  },
+  "en": {
+    "aria": {
+      "slide": "Go to slide",
+      "heroSection": "Hero section"
+    },
+    "heading": {
+      "line1": "Family. Bocho. Taxco.",
+      "line2": "All in one place."
+    },
+    "description": "A visual and personal journey through my history, my memories, and my studies.",
+    "slides": [
+      {
+        "image": "https://cdn.prod.website-files.com/6900c654960f0d76825aec71/6908eaa03ca3b733f5b55d74_hero-slide-2-img-1.avif",
+        "badge": "My family",
+        "name": "Family memories",
+        "role": "Personal history"
+      },
+      {
+        "image": "https://cdn.prod.website-files.com/6900c654960f0d76825aec71/6908eaa045537dccaaf8a29d_hero-slide-4-img-1.avif",
+        "badge": "My bocho",
+        "name": "Bocho adventures",
+        "role": "Experiences"
+      },
+      {
+        "image": "https://cdn.prod.website-files.com/6900c654960f0d76825aec71/6908eaa08dc1cd6373fb8c1a_hero-slide-5-img-1.avif",
+        "badge": "Taxco",
+        "name": "My studies",
+        "role": "Education"
+      }
+    ]
+  }
+}

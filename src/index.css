@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap");
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* ============================================================================
+   THEME CONFIGURATION
+   Design tokens following Tailwind v4 conventions
+   ============================================================================ */
+
+@theme {
+  /* Fonts */
+  --font-sans: "DM Sans", sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+
+  /* Base Colors */
+  --color-background: #fdf8f8;
+  --color-foreground: #1c1b1b;
+
+  /* Surface Colors */
+  --color-surface: #fdf8f8;
+  --color-surface-dim: #ddd9d8;
+  --color-surface-bright: #fdf8f8;
+  --color-surface-lowest: #ffffff;
+  --color-surface-low: #f7f3f2;
+  --color-surface-base: #f1edec;
+  --color-surface-high: #ebe7e6;
+  --color-surface-highest: #e5e2e1;
+  --color-surface-variant: #e5e2e1;
+
+  /* Primary Colors */
+  --color-primary: #000000;
+  --color-primary-foreground: #ffffff;
+  --color-primary-container: #1c1b1b;
+  --color-primary-container-foreground: #858383;
+
+  /* Secondary Colors */
+  --color-secondary: #725c00;
+  --color-secondary-foreground: #ffffff;
+  --color-secondary-container: #fed74c;
+  --color-secondary-container-foreground: #735d00;
+
+  /* Tertiary & Accent */
+  --color-tertiary: #000000;
+  --color-tertiary-foreground: #ffffff;
+  --color-accent: #ff5b3e;
+
+  /* Neutral Colors */
+  --color-muted: #444748;
+  --color-outline: #747878;
+  --color-outline-variant: #c4c7c7;
+  --color-line: #dedede;
+
+  /* Error Colors */
+  --color-error: #ba1a1a;
+  --color-error-foreground: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-error-container-foreground: #93000a;
+
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius-default: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* Spacing */
+  --spacing-unit: 8px;
+  --container-max: 1280px;
+  --gutter: 24px;
+  --margin-desktop: 64px;
+  --margin-mobile: 20px;
+
+  /* Typography Scale */
+  --text-headline-xl: 64px;
+  --text-headline-lg: 48px;
+  --text-headline-md: 32px;
+  --text-headline-sm: 24px;
+  --text-headline-lg-mobile: 36px;
+  --text-body-lg: 18px;
+  --text-body-md: 16px;
+  --text-label-md: 14px;
+  --text-button: 16px;
+}
+
+/* ============================================================================
+   BASE STYLES
+   Global resets and base element styles
+   ============================================================================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-background text-foreground min-h-screen;
+    font-family: var(--font-sans);
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Typography */
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply text-foreground;
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  h3 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    line-height: 1.2;
+    font-weight: 600;
+  }
+
+  p {
+    @apply text-base leading-relaxed;
+  }
+
+  a {
+    @apply text-inherit no-underline;
+  }
+
+  button {
+    font-family: var(--font-sans);
+  }
+}
+
+/* ============================================================================
+   COMPONENT LAYERS
+   Reusable component classes
+   ============================================================================ */
+
+@layer components {
+  /* Layout */
+  .container-shell {
+    width: min(100% - 40px, var(--container-max));
+    margin-inline: auto;
+  }
+
+  /* Cards */
+  .editorial-card {
+    @apply rounded-lg border border-line bg-white;
+  }
+
+  .feature-card {
+    @apply rounded-lg bg-secondary-container text-secondary-container-foreground;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-default bg-primary px-5 py-3 text-primary-foreground font-bold transition-colors duration-200 hover:bg-accent;
+  }
+
+  .btn-accent {
+    @apply inline-flex items-center justify-center rounded-default bg-accent px-5 py-3 text-white font-bold transition-opacity duration-200 hover:opacity-90;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center rounded-default border border-primary px-5 py-3 text-primary font-bold transition-colors duration-200 hover:bg-primary hover:text-white;
+  }
+
+  /* Form Elements */
+  .input-editorial {
+    @apply w-full rounded-default border border-line bg-white px-4 py-3 outline-none transition-colors duration-200 focus:border-black focus:ring-0;
+  }
+
+  /* UI Elements */
+  .chip {
+    @apply inline-flex items-center rounded-full bg-surface-high px-3 py-1 text-sm text-foreground;
+  }
+}
