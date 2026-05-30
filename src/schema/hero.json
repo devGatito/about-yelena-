@@ -11,23 +11,21 @@
     "description": "Un recorrido visual y personal por mi historia, mis recuerdos y mi etapa de estudios.",
     "slides": [
       {
-        "image": "https://cdn.prod.website-files.com/6900c654960f0d76825aec71/6908eaa03ca3b733f5b55d74_hero-slide-2-img-1.avif",
+        
+    "image": "/image/family.png",
         "badge": "Mi familia",
         "name": "Recuerdos familiares",
         "role": "Historia personal"
       },
-      {
-        "image": "https://cdn.prod.website-files.com/6900c654960f0d76825aec71/6908eaa045537dccaaf8a29d_hero-slide-4-img-1.avif",
-        "badge": "Mi bocho",
-        "name": "Aventuras en bocho",
-        "role": "Experiencias"
-      },
-      {
-        "image": "https://cdn.prod.website-files.com/6900c654960f0d76825aec71/6908eaa08dc1cd6373fb8c1a_hero-slide-5-img-1.avif",
-        "badge": "Taxco",
-        "name": "Mi etapa de estudios",
-        "role": "Formación"
+       {
+        
+    "image": "/image/family.png",
+        "badge": "Mi familia",
+        "name": "Recuerdos familiares",
+        "role": "Historia personal"
       }
+      
+     
     ]
   },
   "en": {

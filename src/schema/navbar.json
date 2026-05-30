@@ -8,10 +8,10 @@
     },
     "navItems": [
       { "label": "Inicio", "href": "/" },
-      { "label": "Mi familia", "href": "/familia" },
-      { "label": "Bocho", "href": "/bocho" },
-      { "label": "Taxco", "href": "/taxco" },
-      { "label": "Galería", "href": "/galeria" }
+      { "label": "Mi familia", "href": "/aylin/familia" },
+      { "label": "Bacho", "href": "/aylin/bacho" },
+      { "label": "Taxco", "href": "/aylin/taxco" },
+      { "label": "Galería", "href": "/aylin/galeria" }
     ],
     "search": {
       "placeholder": "Buscar tema, recuerdo o sección…"
@@ -19,28 +19,6 @@
     "actions": {
       "viewProject": "Ver proyecto",
       "siteMap": "Mapa del sitio"
-    }
-  },
-  "en": {
-    "aria": {
-      "navigation": "Main navigation",
-      "search": "Search site",
-      "closeMenu": "Close menu",
-      "openMenu": "Open menu"
-    },
-    "navItems": [
-      { "label": "Home", "href": "/" },
-      { "label": "My family", "href": "/familia" },
-      { "label": "Bocho", "href": "/bocho" },
-      { "label": "Taxco", "href": "/taxco" },
-      { "label": "Gallery", "href": "/galeria" }
-    ],
-    "search": {
-      "placeholder": "Search topic, memory or section…"
-    },
-    "actions": {
-      "viewProject": "View project",
-      "siteMap": "Site map"
     }
   }
 }

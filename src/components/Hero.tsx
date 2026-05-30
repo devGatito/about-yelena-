@@ -53,7 +53,7 @@ export default function HeroIsomeetStyle() {
             </div>
 
             {/* Floating info card */}
-            <div className="absolute bottom-8 left-4 z-10 w-[235px] rounded-[24px] bg-white/95 p-4 shadow-[0_18px_50px_rgba(0,0,0,0.12)] backdrop-blur-sm sm:bottom-20 sm:left-[-40px] sm:w-[260px]">
+            <div className="absolute bottom-4 left-4 z-10 w-[235px] rounded-[24px] bg-white/95 p-4 shadow-[0_18px_50px_rgba(0,0,0,0.12)] backdrop-blur-sm sm:bottom-5 sm:left-[-40px] sm:w-[260px]">
               <p className="mb-2 text-sm text-muted">{slides[current].badge}</p>
 
               <div className="flex items-center gap-3">
