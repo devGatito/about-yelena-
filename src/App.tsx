@@ -22,16 +22,13 @@ export default function App() {
       <Route path="/aylin/familia" element={<MiFamiliaPage />} />
       <Route path="/aylin/bacho" element={<BachilleresPage />} />
       <Route path="/aylin/sobre-mi" element={<SobreMiPage />} />
-      
       <Route path="/aylin/mi-carrera" element={<MiCarreraPage />} />
       <Route path="/aylin/taxco" element={<TaxcoPage />} />
       <Route path="/aylin/galeria" element={<GaleriaPage />} />
       <Route path="/aylin/mapa-sitio" element={<MapaSitioPage />} />
       <Route path="/aylin/enlaces-relacionados" element={<EnlacesRelacionadosPage />} />
       <Route path="/aylin/contacto" element={<ContactoPage />} />
-
-
-       <Route path="*" element={<NotFoundPage />} />
+      <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
 }

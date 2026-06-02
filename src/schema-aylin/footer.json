@@ -1,0 +1,32 @@
+{
+  "es": {
+    "brand": "Yelena",
+    "description": "Un sitio personal para reunir recuerdos, identidad, lugares y proyectos.",
+    "navigationTitle": "Navegación",
+    "socialTitle": "Redes",
+    "navigationLinks": [
+      { "label": "Inicio", "href": "/" },
+      { "label": "Sobre mí", "href": "/#sobre-mi" },
+      { "label": "Temas principales", "href": "/#temas" },
+      { "label": "Mapa del sitio", "href": "/#mapa-del-sitio" },
+      { "label": "Proyectos", "href": "/#proyectos" },
+      { "label": "Contacto", "href": "/#contacto" }
+    ],
+    "socialLinks": [
+      { "label": "GitHub", "href": "https://github.com/" },
+      { "label": "LinkedIn", "href": "https://linkedin.com/" },
+      { "label": "Instagram", "href": "https://instagram.com/" }
+    ],
+    "credit": {
+      "title": "Diseñado y construido por Yelena.",
+      "description": "Hecho con cuidado, memoria y código."
+    },
+    "bottomBar": {
+      "copyright": "© 2026 Yelena. Todos los derechos reservados.",
+      "links": [
+        { "label": "Mapa del sitio", "href": "/#mapa-del-sitio" },
+        { "label": "Contacto", "href": "/#contacto" }
+      ]
+    }
+  }
+}

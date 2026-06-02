@@ -1,0 +1,22 @@
+{
+  "es": {
+    "eyebrow": "Vínculos",
+    "title": "Su apoyo deja huella",
+    "image": {
+      "src": "/image/health.png",
+      "alt": "Imagen representativa de los vínculos familiares"
+    },
+    "items": [
+      {
+        "id": "distancia-esfuerzo",
+        "title": "Distancia y esfuerzo",
+        "description": "Mi papá Ray y mi hermano Ulises actualmente trabajan en Estados Unidos. Aunque estén lejos, siguen siendo muy importantes para mí y admiro profundamente el esfuerzo que hacen todos los días por salir adelante y apoyar a la familia."
+      },
+      {
+        "id": "compania-carino",
+        "title": "Compañía y cariño",
+        "description": "Mi mamá Mayra y mi abuelita Silvia forman una parte muy cercana de mi día a día. Con ellas comparto apoyo, escucha, amor y compañía, y por eso ocupan un lugar muy especial en mi vida."
+      }
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "es": {
+    "eyebrow": "Recuerdos familiares",
+    "title": "Galería en movimiento",
+    "description": [
+      "Este espacio reúne recuerdos, personas y momentos que forman parte de mi historia. Mientras avanzas, las imágenes se arrastran como una secuencia continua para darle al recorrido una sensación más viva y personal.",
+      "La idea es que no se sienta como una galería rígida, sino como una línea visual en movimiento."
+    ],
+    "items": [
+      {
+        "id": 1,
+        "image": "https://cdn.prod.website-files.com/6900c654960f0d76825aec71/6908eaa03ca3b733f5b55d74_hero-slide-2-img-1.avif",
+        "alt": "Familia 1",
+        "offsetY": 40,
+        "rotate": -2
+      },
+      {
+        "id": 2,
+        "image": "https://cdn.prod.website-files.com/6900c654960f0d76825aec71/6908eaa03ca3b733f5b55d74_hero-slide-2-img-1.avif",
+        "alt": "Familia 2",
+        "offsetY": 180,
+        "rotate": 1
+      },
+      {
+        "id": 3,
+        "image": "https://cdn.prod.website-files.com/6900c654960f0d76825aec71/6908eaa03ca3b733f5b55d74_hero-slide-2-img-1.avif",
+        "alt": "Familia 3",
+        "offsetY": 140,
+        "rotate": -1
+      },
+      {
+        "id": 4,
+        "image": "https://cdn.prod.website-files.com/6900c654960f0d76825aec71/6908eaa03ca3b733f5b55d74_hero-slide-2-img-1.avif",
+        "alt": "Familia 4",
+        "offsetY": 90,
+        "rotate": 2
+      },
+      {
+        "id": 5,
+        "image": "https://cdn.prod.website-files.com/6900c654960f0d76825aec71/6908eaa03ca3b733f5b55d74_hero-slide-2-img-1.avif",
+        "alt": "Familia 5",
+        "offsetY": 10,
+        "rotate": -1
+      },
+      {
+        "id": 6,
+        "image": "https://cdn.prod.website-files.com/6900c654960f0d76825aec71/6908eaa03ca3b733f5b55d74_hero-slide-2-img-1.avif",
+        "alt": "Familia 6",
+        "offsetY": 120,
+        "rotate": 1
+      },
+      {
+        "id": 7,
+        "image": "https://cdn.prod.website-files.com/6900c654960f0d76825aec71/6908eaa03ca3b733f5b55d74_hero-slide-2-img-1.avif",
+        "alt": "Familia 7",
+        "offsetY": 70,
+        "rotate": -2
+      }
+    ]
+  }
+}

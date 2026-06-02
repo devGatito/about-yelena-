@@ -1,3 +1,5 @@
+import mainTopicsSchema from "../schema-aylin/main-topics.json";
+
 type TopicCardProps = {
   title: string;
   description: string;
@@ -7,6 +9,24 @@ type TopicCardProps = {
   cta?: string;
   size?: "large" | "small";
   className?: string;
+};
+
+type TopicItem = {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  href?: string;
+  eyebrow?: string;
+  cta?: string;
+  size?: "large" | "small";
+};
+
+type MainTopicsContent = {
+  eyebrow: string;
+  title: string;
+  description: string;
+  items: TopicItem[];
 };
 
 function TopicCard({
@@ -84,65 +104,37 @@ function TopicCard({
   );
 }
 
-type MainTopicsSectionProps = {
-  title?: string;
-  description?: string;
-};
+export default function MainTopicsSection() {
+  const lang = "es";
+  const content = mainTopicsSchema[lang] as MainTopicsContent;
 
-export default function MainTopicsSection({
-  title = "Temas principales",
-  description = "Tres partes importantes de mi historia personal: recuerdos, identidad y lugares que forman parte de quién soy.",
-}: MainTopicsSectionProps) {
+  const largeCard = content.items.find((item) => item.size === "large");
+  const smallCards = content.items.filter((item) => item.size === "small");
+
   return (
     <section className="bg-background py-20 md:py-28">
       <div className="container-shell">
         <div className="mb-10 max-w-2xl md:mb-14">
           <p className="mb-3 text-[12px] font-medium uppercase tracking-[0.18em] text-accent">
-            Explorar
+            {content.eyebrow}
           </p>
 
           <h2 className="font-display text-[var(--text-headline-sm)] text-foreground md:text-[var(--text-headline-md)]">
-            {title}
+            {content.title}
           </h2>
 
           <p className="mt-4 max-w-[60ch] text-body-md leading-relaxed text-muted">
-            {description}
+            {content.description}
           </p>
         </div>
 
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-[1.45fr_0.85fr] lg:gap-6">
-          {/* Card grande */}
-          <TopicCard
-            size="large"
-            eyebrow="Historia"
-            title="Mi familia"
-            description="Recuerdos, momentos importantes y personas que han marcado mi historia."
-            image="https://cdn.prod.website-files.com/6900c654960f0d76825aec71/6908eaa03ca3b733f5b55d74_hero-slide-2-img-1.avif"
-            href="/familia"
-            cta="Entrar"
-          />
+          {largeCard ? <TopicCard key={largeCard.id} {...largeCard} /> : null}
 
-          {/* Columna derecha */}
           <div className="grid grid-cols-1 gap-5 lg:grid-rows-2 lg:gap-6">
-            <TopicCard
-              size="small"
-              eyebrow="Memoria"
-              title="Bocho"
-              description="Una parte muy personal y simbólica de mi camino."
-              image="https://cdn.prod.website-files.com/6900c654960f0d76825aec71/6908eaa03ca3b733f5b55d74_hero-slide-2-img-1.avif"
-              href="/bocho"
-              cta="Descubrir"
-            />
-
-            <TopicCard
-              size="small"
-              eyebrow="Lugar"
-              title="Taxco"
-              description="El entorno, la atmósfera y los recuerdos de un lugar importante para mí."
-              image="https://cdn.prod.website-files.com/6900c654960f0d76825aec71/6908eaa03ca3b733f5b55d74_hero-slide-2-img-1.avif"
-              href="/taxco"
-              cta="Explorar"
-            />
+            {smallCards.map((item) => (
+              <TopicCard key={item.id} {...item} />
+            ))}
           </div>
         </div>
       </div>

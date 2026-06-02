@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import heroSchema from "../schema/hero.json";
+import heroSchema from "../schema-aylin/hero.json";
 
 export default function HeroIsomeetStyle() {
   const [current, setCurrent] = useState(0);

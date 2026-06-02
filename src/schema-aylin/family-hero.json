@@ -1,0 +1,16 @@
+{
+  "es": {
+    "title": "Mi familia es una parte fundamental de mi vida.",
+    "paragraphs": [
+      "Mi familia siempre ha estado presente en los momentos más importantes de mi vida. Su apoyo, cariño y compañía me han dado fuerza para seguir adelante.",
+      "Cada integrante ocupa un lugar especial para mí. A través del tiempo, las experiencias, los consejos y los recuerdos han hecho que nuestro vínculo sea algo que valoro profundamente.",
+      "Más que cercanía, representan amor, confianza y una base que me acompaña incluso en la distancia."
+    ],
+    "actions": {
+      "primary": {
+        "label": "Ver integrantes",
+        "to": "#integrantes"
+      }
+    }
+  }
+}

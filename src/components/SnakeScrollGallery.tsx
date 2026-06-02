@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import snakeGallerySchema from "../schema-aylin/snake-gallery.json";
 
 type SnakeItem = {
   id: number;
@@ -8,19 +9,20 @@ type SnakeItem = {
   rotate?: number;
 };
 
-const items: SnakeItem[] = [
-  { id: 1, image: "https://cdn.prod.website-files.com/6900c654960f0d76825aec71/6908eaa03ca3b733f5b55d74_hero-slide-2-img-1.avif", alt: "Familia 1", offsetY: 40, rotate: -2 },
-  { id: 2, image: "https://cdn.prod.website-files.com/6900c654960f0d76825aec71/6908eaa03ca3b733f5b55d74_hero-slide-2-img-1.avif", alt: "Familia 2", offsetY: 180, rotate: 1 },
-  { id: 3, image: "https://cdn.prod.website-files.com/6900c654960f0d76825aec71/6908eaa03ca3b733f5b55d74_hero-slide-2-img-1.avif", alt: "Familia 3", offsetY: 140, rotate: -1 },
-  { id: 4, image: "https://cdn.prod.website-files.com/6900c654960f0d76825aec71/6908eaa03ca3b733f5b55d74_hero-slide-2-img-1.avif", alt: "Familia 4", offsetY: 90, rotate: 2 },
-  { id: 5, image: "https://cdn.prod.website-files.com/6900c654960f0d76825aec71/6908eaa03ca3b733f5b55d74_hero-slide-2-img-1.avif", alt: "Familia 5", offsetY: 10, rotate: -1 },
-  { id: 6, image: "https://cdn.prod.website-files.com/6900c654960f0d76825aec71/6908eaa03ca3b733f5b55d74_hero-slide-2-img-1.avif", alt: "Familia 6", offsetY: 120, rotate: 1 },
-  { id: 7, image: "https://cdn.prod.website-files.com/6900c654960f0d76825aec71/6908eaa03ca3b733f5b55d74_hero-slide-2-img-1.avif", alt: "Familia 7", offsetY: 70, rotate: -2 },
-];
+type SnakeGalleryContent = {
+  eyebrow: string;
+  title: string;
+  description: string[];
+  items: SnakeItem[];
+};
 
 export default function SnakeScrollGallery() {
   const sectionRef = useRef<HTMLElement | null>(null);
   const [progress, setProgress] = useState(0);
+
+  const lang = "es";
+  const content = snakeGallerySchema[lang] as SnakeGalleryContent;
+  const items = content.items;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,38 +51,33 @@ export default function SnakeScrollGallery() {
   const translateX = progress * 55;
 
   return (
-    <section
-      ref={sectionRef}
-      className="relative h-[220vh] bg-background"
-    >
+    <section ref={sectionRef} className="relative h-[220vh] bg-background">
       <div className="sticky top-0 h-screen overflow-hidden">
         <div className="container-shell relative flex h-full flex-col justify-between py-10 md:py-14">
-          {/* Top copy */}
           <div className="grid grid-cols-1 gap-8 md:grid-cols-12">
-            <div className="md:col-span-7" />
-            <div className="md:col-span-5 max-w-md">
-              <p className="text-sm leading-6 text-foreground md:text-base">
-                Este espacio reúne recuerdos, personas y momentos que forman
-                parte de mi historia. Mientras avanzas, las imágenes se arrastran
-                como una secuencia continua para darle al recorrido una sensación
-                más viva y personal.
-              </p>
+            <div className="md:col-span-7">
 
-              <p className="mt-5 text-sm leading-6 text-muted md:text-base">
-                La idea es que no se sienta como una galería rígida, sino como
-                una línea visual en movimiento.
-              </p>
+             
+            </div>
+
+            <div className="md:col-span-5 max-w-md">
+              {content.description.map((paragraph, index) => (
+                <p
+                  key={`snake-description-${index}`}
+                  className={`text-sm leading-6 md:text-base ${
+                    index === 0 ? "text-foreground" : "mt-5 text-muted"
+                  }`}
+                >
+                  {paragraph}
+                </p>
+              ))}
             </div>
           </div>
 
-          {/* Snake row */}
           <div className="relative mt-10 h-[52vh] md:h-[56vh]">
             <div
               className="absolute left-0 top-0 flex will-change-transform"
-              style={{
-                transform: `translateX(-${translateX}%)`,
-                gap: "0px",
-              }}
+              style={{ transform: `translateX(-${translateX}%)`, gap: "0px" }}
             >
               {items.map((item) => (
                 <article
@@ -88,7 +85,7 @@ export default function SnakeScrollGallery() {
                   className="relative shrink-0"
                   style={{
                     marginTop: `${item.offsetY ?? 0}px`,
-                    transform: `rotate(${item.rotate ?? 0}deg)`,
+                    transform: `rotate(${item.rotate ?? 0}deg)`
                   }}
                 >
                   <div className="overflow-hidden bg-surface-lowest shadow-[0_12px_32px_rgba(0,0,0,0.08)]">
@@ -101,14 +98,13 @@ export default function SnakeScrollGallery() {
                 </article>
               ))}
 
-              {/* duplicado para que no se sienta cortado */}
               {items.map((item) => (
                 <article
                   key={`duplicate-${item.id}`}
                   className="relative shrink-0"
                   style={{
                     marginTop: `${item.offsetY ?? 0}px`,
-                    transform: `rotate(${item.rotate ?? 0}deg)`,
+                    transform: `rotate(${item.rotate ?? 0}deg)`
                   }}
                 >
                   <div className="overflow-hidden bg-surface-lowest shadow-[0_12px_32px_rgba(0,0,0,0.08)]">

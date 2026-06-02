@@ -1,0 +1,39 @@
+{
+  "es": {
+    "eyebrow": "Explorar",
+    "title": "Temas principales",
+    "description": "Tres partes importantes de mi historia personal: recuerdos, identidad y lugares que forman parte de quién soy.",
+    "items": [
+      {
+        "id": "familia",
+        "size": "large",
+        "eyebrow": "Historia",
+        "title": "Mi familia",
+        "description": "Recuerdos, momentos importantes y personas que han marcado mi historia.",
+        "image": "https://cdn.prod.website-files.com/6900c654960f0d76825aec71/6908eaa03ca3b733f5b55d74_hero-slide-2-img-1.avif",
+        "href": "/aylin/familia",
+        "cta": "Entrar"
+      },
+      {
+        "id": "bocho",
+        "size": "small",
+        "eyebrow": "Memoria",
+        "title": "Bocho",
+        "description": "Una parte muy personal y simbólica de mi camino.",
+        "image": "https://cdn.prod.website-files.com/6900c654960f0d76825aec71/6908eaa03ca3b733f5b55d74_hero-slide-2-img-1.avif",
+        "href": "/aylin/bacho",
+        "cta": "Descubrir"
+      },
+      {
+        "id": "taxco",
+        "size": "small",
+        "eyebrow": "Lugar",
+        "title": "Taxco",
+        "description": "El entorno, la atmósfera y los recuerdos de un lugar importante para mí.",
+        "image": "https://cdn.prod.website-files.com/6900c654960f0d76825aec71/6908eaa03ca3b733f5b55d74_hero-slide-2-img-1.avif",
+        "href": "/aylin/taxco",
+        "cta": "Explorar"
+      }
+    ]
+  }
+}

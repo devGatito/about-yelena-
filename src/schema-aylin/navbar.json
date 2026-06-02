@@ -1,0 +1,47 @@
+{
+  "es": {
+    "aria": {
+      "navigation": "Navegación principal",
+      "search": "Buscar en el sitio",
+      "closeMenu": "Cerrar menú",
+      "openMenu": "Abrir menú"
+    },
+    "navItems": [
+      { "label": "Inicio", "href": "/aylin" },
+      {
+        "label": "Sobre Aylin",
+        "href": "/aylin",
+        "children": [
+          { "label": "Mi familia", "href": "/aylin/familia" },
+          { "label": "Bacho", "href": "/aylin/bacho" },
+          { "label": "Sobre mí", "href": "/aylin/sobre-mi" },
+          { "label": "Mi carrera", "href": "/aylin/mi-carrera" }
+        ]
+      },
+      {
+        "label": "Lugares y recuerdos",
+        "href": "/aylin/taxco",
+        "children": [
+          { "label": "Taxco", "href": "/aylin/taxco" },
+          { "label": "Galería", "href": "/aylin/galeria" }
+        ]
+      },
+      {
+        "label": "Más",
+        "href": "/aylin/mapa-sitio",
+        "children": [
+          { "label": "Mapa del sitio", "href": "/aylin/mapa-sitio" },
+          { "label": "Enlaces relacionados", "href": "/aylin/enlaces-relacionados" },
+          { "label": "Contacto", "href": "/aylin/contacto" }
+        ]
+      }
+    ],
+    "search": {
+      "placeholder": "Buscar tema, recuerdo o sección…"
+    },
+    "actions": {
+      "viewProject": "Ver proyecto",
+      "siteMap": "Mapa del sitio"
+    }
+  }
+}

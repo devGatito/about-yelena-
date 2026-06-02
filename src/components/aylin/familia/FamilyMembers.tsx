@@ -1,6 +1,20 @@
 import { motion } from "motion/react";
-import { familyMembers } from "./family.data";
+import familyMembersSchema from "../../../schema-aylin/family-members.json";
 
+type FamilyMember = {
+  id: string;
+  name: string;
+  role: string;
+  image: string;
+  description: string;
+  reflection: string;
+};
+
+type FamilyMembersContent = {
+  eyebrow: string;
+  title: string;
+  items: FamilyMember[];
+};
 
 const itemStyles = [
   {
@@ -26,8 +40,15 @@ const itemStyles = [
 ];
 
 export default function FamilyMembers() {
+  const lang = "es";
+  const content = familyMembersSchema[lang] as FamilyMembersContent;
+  const familyMembers = content.items;
+
   return (
-    <section id="integrantes" className="overflow-hidden border-b border-line bg-background">
+    <section
+      id="integrantes"
+      className="overflow-hidden border-b border-line bg-background"
+    >
       <div className="container-shell relative py-16 md:py-24">
         <motion.div
           initial={{ opacity: 0, y: 22 }}
@@ -36,15 +57,15 @@ export default function FamilyMembers() {
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className="mx-auto max-w-2xl text-center"
         >
-          <span className="chip">Integrantes</span>
+          <span className="chip">{content.eyebrow}</span>
           <h2 className="mt-4 font-display text-3xl tracking-tight sm:text-4xl">
-            Personas que ocupan un lugar muy especial
+            {content.title}
           </h2>
         </motion.div>
 
         <svg
           aria-hidden="true"
-          className="pointer-events-none absolute left-1/2 top-40 hidden h-[calc(100%-8rem)]  -translate-x-1/2 md:block"
+          className="pointer-events-none absolute left-1/2 top-40 hidden h-[calc(100%-8rem)] -translate-x-1/2 md:block"
           viewBox="0 0 860 1800"
           fill="none"
           preserveAspectRatio="none"
@@ -69,7 +90,7 @@ export default function FamilyMembers() {
 
             return (
               <motion.article
-                key={member.name}
+                key={member.id}
                 initial={{ opacity: 0, y: 28, filter: "blur(8px)" }}
                 whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                 viewport={{ once: true, amount: 0.2 }}
@@ -87,7 +108,9 @@ export default function FamilyMembers() {
                       isReversed ? "md:order-2" : "md:order-1",
                     ].join(" ")}
                   >
-                    <div className={`relative overflow-hidden rounded-[28px] ${style.soft} p-3`}>
+                    <div
+                      className={`relative overflow-hidden rounded-[28px] ${style.soft} p-3`}
+                    >
                       <img
                         src={member.image}
                         alt={member.name}
@@ -97,45 +120,36 @@ export default function FamilyMembers() {
                     </div>
                   </div>
 
-                 <div
-  className={[
-    "mx-auto w-full max-w-[560px]",
-    isReversed ? "md:order-1" : "md:order-2",
-  ].join(" ")}
->
-  <div className="relative">
-    <div className="">
-      <div className="flex items-center gap-0">
+                  <div
+                    className={[
+                      "mx-auto w-full max-w-[560px]",
+                      isReversed ? "md:order-1" : "md:order-2",
+                    ].join(" ")}
+                  >
+                    <div className="relative">
+                      <div className="rounded-[28px] border border-line bg-white/80 p-6 shadow-sm backdrop-blur-sm md:p-8">
+                        <p className="text-sm uppercase tracking-[0.18em] text-muted md:hidden">
+                          {member.role}
+                        </p>
 
-      </div>
-    </div>
+                        <span className="flex h-12 w-12 items-center justify-center rounded-full border border-line bg-white text-sm font-bold text-foreground shadow-sm">
+                          {String(index + 1).padStart(2, "0")}
+                        </span>
 
-    <div className="rounded-[28px] border border-line bg-white/80 p-6 shadow-sm backdrop-blur-sm md:pl-14 md:p-8">
-      <p className="text-sm uppercase tracking-[0.18em] text-muted md:hidden">
-        
-        {member.role}
-      </p>
-      <span className="flex h-12 w-12 items-center justify-center rounded-full border border-line bg-white text-sm font-bold text-foreground shadow-sm">
-          {String(index + 1).padStart(2, "0")}
-        </span>
+                        <h3 className="mt-2 font-display text-2xl tracking-tight text-foreground sm:text-3xl">
+                          {member.name}
+                        </h3>
 
-      <h3 className="mt-2 font-display text-2xl tracking-tight text-foreground sm:text-3xl">
-        {member.name}
-      </h3>
+                        <p className="mt-4 leading-relaxed text-muted">
+                          {member.description}
+                        </p>
 
-      <p className="mt-4 leading-relaxed text-muted">
-        {member.description}
-      </p>
-
-      <p className="mt-4 leading-relaxed text-muted">
-        {member.name} forma parte de recuerdos, aprendizajes y
-        momentos que valoro muchísimo. Su presencia en mi vida
-        representa cariño, cercanía y una conexión muy
-        importante para mí.
-      </p>
-    </div>
-  </div>
-</div>
+                        <p className="mt-4 leading-relaxed text-muted">
+                          {member.reflection}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </motion.article>
             );

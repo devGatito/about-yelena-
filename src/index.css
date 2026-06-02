@@ -202,3 +202,28 @@ html {
     filter: blur(0);
   }
 }
+
+html,
+body,
+#root {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+#root::-webkit-scrollbar {
+  display: none;
+}
+
+.fiasco-image {
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+@layer components {
+  .modal-card {
+    @apply rounded-(--radius-xl) border border-line bg-surface-lowest shadow-[0_24px_60px_rgba(0,0,0,.16)];
+  }
+}

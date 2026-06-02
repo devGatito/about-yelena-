@@ -8,6 +8,7 @@ interface ButtonProps {
   variant?: "primary" | "secondary";
   size?: "default" | "mobile";
   onClick?: () => void;
+  className?: string;
 }
 
 const Button = ({
